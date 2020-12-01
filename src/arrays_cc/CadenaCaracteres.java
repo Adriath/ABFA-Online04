@@ -174,8 +174,18 @@ public class CadenaCaracteres {
         
         while (posicion > -1){ // Cuando no encuentre la palabra retornará -1 y saldrá del bucle.
             
-            posicion = cadena1.indexOf(cadena2,(posicion + 1));
+            posicion = cadena1.indexOf(cadena2,(posicion + 1)); 
             contador++ ;
+            
+            /* CÓMO FUNCIONA: Cuando encuentra la palabra , el método IndexOf devuelve un int con la posición en que se encuentra.
+            De no encontrarlo daría un -1. La primera vez no tenemos problema, dará un 3000 y pico, que es la primera posición en que 
+            aparece y la almacenamos en la vaiable posicion. Si lo hiciéramos de manera manual tendríamos que usar la última
+            posición conocida para no empezar desde 0, pero no reconoce esa posición, sino al siguiente (si la primera fuese 3402,
+            habría que retomar por la 3403). Es por ello que, como parámetro pondremos la última posición conocida + 1.
+            Se repetirá este proceso aportando posiciones en segundo plano como 3402, 3747, 6832, 9223 y similares. Cuando no tenga
+            más por delante, en vez de estas posiciones retornará un -1, ahora esta será nuestra última posición conocida.
+            Con ello, deja de cumplirse la condición del bucle y se sale, mostrando las veces que indica el contador.
+            */
         }
         
         
