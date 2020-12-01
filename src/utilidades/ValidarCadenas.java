@@ -8,6 +8,7 @@ package utilidades;
 import java.util.regex.*;
 
 /**
+ * Contiene un submenú y dos métodos para comprobar matrículas de coche y ciclomotor.
  * 
  * @author Adrián Arjona
  * @version 1.0
@@ -151,7 +152,5 @@ public class ValidarCadenas {
         IO_ES.escribirLN("--------------------------------------------");
     }
     
-    public static void main(String[] args) {
-        opcionesMenu();
-    }
+    
 }
