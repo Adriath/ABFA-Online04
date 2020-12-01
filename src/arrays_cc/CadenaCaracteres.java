@@ -85,10 +85,12 @@ public class CadenaCaracteres {
             catch (NumberFormatException e){
                 
                 System.out.println(rojo +  "Puede que hayas introducido una letra o un decimal..\n" + reset);
+                opcion = -1;
             }
             catch (Exception e){
                 
                 System.out.println(rojo + "Puede que hayas introducido algo mal. \n" + reset);
+                opcion = -1;
             }
             
             try
@@ -129,9 +131,11 @@ public class CadenaCaracteres {
             catch(NumberFormatException e){
                 
                 System.out.println(rojo + "Puede que hayas introducido una letra." + reset);
+                opcion = -1;
             }
             catch (Exception e){
                 System.out.println(rojo + "Has introducido algún carácter inválido" + reset);
+                opcion = -1;
             }
             
         } while (validador == false);
