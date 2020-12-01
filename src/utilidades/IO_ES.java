@@ -34,7 +34,7 @@ public class IO_ES {
         do 
         {
             
-            System.out.print("¡Hola! Introduce un número entero, por favor: ");
+            System.out.print("Introduce un número entero, por favor: ");
             String num = teclado.nextLine();
         
             try
@@ -76,7 +76,7 @@ public class IO_ES {
         do 
         {
             
-            System.out.print("¡Hola! Introduce un número real, por favor: ");
+            System.out.print("Introduce un número real, por favor: ");
             String num = teclado.nextLine();
             
             try
@@ -118,7 +118,7 @@ public class IO_ES {
         do 
         {
             
-            System.out.print("¡Hola! Introduce un número entero largo, por favor: ");
+            System.out.print("Introduce un número entero largo, por favor: ");
             String num = teclado.nextLine();
             
             try
@@ -160,7 +160,7 @@ public class IO_ES {
         do 
         {
             
-            System.out.print("¡Hola! Introduce un número real largo, por favor: ");
+            System.out.print("Introduce un número real largo, por favor: ");
             String num = teclado.nextLine();
             
             try
@@ -194,7 +194,7 @@ public class IO_ES {
         
         Scanner teclado = new Scanner(System.in);
             
-        System.out.print("¡Hola! Introduce un mensaje, por favor: ");
+        System.out.print("Escribe aquí: ");
         String mensaje = teclado.nextLine();
         
         return mensaje ;

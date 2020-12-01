@@ -90,7 +90,7 @@ public class CadenaCaracteres {
             System.out.println("1. Buscar palabra $Hyperboss.");
             System.out.println("2. Sustituir $Hyperboss por COÑAZO.");
             System.out.println("3. Visualiza la primera fase de $Hyperboss.");
-            System.out.println("\n-- Pulsa 0 para salir del menú.");
+            System.out.println("\n-- Pulsa 0 para volver al menú principal.");
             
             System.out.println("\nSelecciona una de las opciones: ");
             String opc = teclado.nextLine() ;
@@ -139,7 +139,7 @@ public class CadenaCaracteres {
                         }
                         else
                         {
-                            System.out.println("Elige una opción válida, por favor.");
+                            System.out.println("\nElige una opción válida, por favor.");
                         }
                         break;
                 }
