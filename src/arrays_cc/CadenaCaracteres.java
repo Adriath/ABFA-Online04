@@ -53,6 +53,8 @@ public class CadenaCaracteres {
         
         int opcion = 0;
         
+        CadenaCaracteres objeto = new CadenaCaracteres();
+        
         // Colores para la consola
         
         String rojo="\033[31m";
@@ -85,6 +87,7 @@ public class CadenaCaracteres {
                 
                 System.out.println(rojo + "Puede que hayas introducido algo mal. \n" + reset);
             }
+            
             
             
         } while (opcion!=0);
@@ -140,16 +143,17 @@ public class CadenaCaracteres {
         
     }
     
-    
-    public static void main(String[] args) { //MAIN PROVISIONAL
+    public String muestraPrimeraFrase(){
         
         CadenaCaracteres objeto = new CadenaCaracteres();
         
-//        objeto.opcionesMenu();
-//        System.out.println(objeto.textoAdjunto());
-//        System.out.println(objeto.buscaHyperboss());
-//        System.out.println(objeto.sustituyeHyperboss());
-            
+        String cadena1 = objeto.textoAdjunto();
+        String cadena2 = "$Hyperboss";
+        int posicion = cadena1.indexOf(cadena2);
+        
+        cadena1 = cadena1.substring((posicion - 24),(posicion + cadena2.length()));
+        
+        return cadena1;
     }
    
     
