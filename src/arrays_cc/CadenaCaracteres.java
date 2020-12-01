@@ -10,6 +10,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
+
+/* NOTA: No he incorporado aquí los métodos de la clase IO_ES porque, según el 
+    orden del ejercicio, los he implementado después de escribir todo este código.
+    Como puede verse su funcionamiento y uso en la clase ValidarCadenas, omito hacer
+    todos los cambios aquí y así poder optimizar el tiempo, aún quedan retos por delante.
+*/
+
 /**
  * Realiza operaciones con cadenas de caracteres. Incluye un menú para elegir la
  * opción deseada.

@@ -185,6 +185,23 @@ public class IO_ES {
     }
     
     /**
+     * Pide al usuario un mensaje tipo String por teclado.
+     * 
+     * @return Devuelve el mensaje introducido por teclado como String.
+     */
+    
+    public static String leerString(){
+        
+        Scanner teclado = new Scanner(System.in);
+            
+        System.out.print("¡Hola! Introduce un mensaje, por favor: ");
+        String mensaje = teclado.nextLine();
+        
+        return mensaje ;
+        
+    }
+    
+    /**
      * Lee un mensaje String escrito por parámetro y lo muestra por pantalla.
      * 
      * @param mensaje String. Muestra en la misma línea el mensaje recogido por parámetro.
@@ -205,8 +222,8 @@ public class IO_ES {
     static public void escribirLN(String mensaje){
         
         System.out.println(mensaje);
-        
-    }
+       
+    } 
     
 }
 
