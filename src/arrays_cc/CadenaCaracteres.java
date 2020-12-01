@@ -19,9 +19,13 @@ import java.util.*;
  */
 public class CadenaCaracteres {
     
-    // DECLARACIÓN DE VARIABLES
-    
     // MÉTODOS
+    
+    /**
+     * Lee el fichero "texto.txt" incluido en el proyecto dentro de la carpeta "fichero".
+     * 
+     * @return El contenido de "texto.txt" como String.
+     */
     
     public String textoAdjunto(){ // He decidido meterlo en un método porque
                                             // no hallaba la manera de que funcionara como variable normal.
@@ -46,6 +50,11 @@ public class CadenaCaracteres {
         return texto;
         
     }
+    
+    /**
+     * Menú para explorar los métodos de la clase CadenaCaracteres. Se le llama
+     * submenú porque está pensado para integrarse en otro menú.
+     */
     
     public void opcionesMenu(){
         
@@ -84,7 +93,7 @@ public class CadenaCaracteres {
             }
             catch (NumberFormatException e){
                 
-                System.out.println(rojo +  "Puede que hayas introducido una letra o un decimal..\n" + reset);
+                System.out.println(rojo +  "Puede que hayas introducido una letra o un decimal...\n" + reset);
                 opcion = -1;
             }
             catch (Exception e){
@@ -141,9 +150,16 @@ public class CadenaCaracteres {
         } while (validador == false);
         
         System.out.println("--------------------------------------------");
-        System.out.println("Saliendo del submenú. \n");
+        System.out.println("Saliendo del submenú.");
         System.out.println("--------------------------------------------");
     }
+    
+    /**
+     * Busca la palabra $Hyperboss en el contenido del fichero "texto.txt" para
+     * conocer cuántas veces se repite.
+     * 
+     * @return Un mensaje tipo String que indica las veces que se repite la palabra.
+     */
     
     public String buscaHyperboss(){
         
@@ -163,9 +179,15 @@ public class CadenaCaracteres {
         }
         
         
-        return ("La palabra " + cadena2 + " aparece " + contador + " veces en el texto.") ;
+        return ("\nLa palabra " + cadena2 + " aparece " + contador + " veces en el texto.") ;
     
     }
+    
+    /**
+     * Busca y sustituye la palabra "$Hyperboss" por "COÑAZO".
+     * 
+     * @return Devuelve como String el contenido de "texto.txt" con los cambios aplicados.
+     */
     
     public String sustituyeHyperboss(){
         
@@ -192,6 +214,12 @@ public class CadenaCaracteres {
         
     }
     
+    /**
+     * Muestra la primera frase en que aparece la palabra "$Hyperboss" dentro de "texto.txt".
+     * 
+     * @return La primera frase en que aparece la palabra "@Hyperboss" como String.
+     */
+    
     public String muestraPrimeraFrase(){
         
         CadenaCaracteres objeto = new CadenaCaracteres();
@@ -201,10 +229,12 @@ public class CadenaCaracteres {
         String cadena3 = "despacho." ;
         int posicion = cadena1.indexOf(cadena2);
         
-        cadena1 = cadena1.substring(posicion,((cadena1.indexOf(cadena3)) + cadena3.length()));
+        cadena1 = "\nFRASE: " + cadena1.substring(posicion,((cadena1.indexOf(cadena3)) + cadena3.length()));
         
         return cadena1;
     }
+    
+    
    
     public static void main(String[] args) {
         
