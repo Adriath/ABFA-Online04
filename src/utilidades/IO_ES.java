@@ -19,10 +19,11 @@ public class IO_ES {
     /**
      * Pide al usuario que introduzca un número entero por teclado.
      * 
+     * @param String mensaje. Introduce un texto para que salga por pantalla.
      * @return Int. Número entero introducido por el usuario.
      */
     
-    static public int leerInteger(){
+    static public int leerInteger(String mensaje){
         
         String rojo="\033[31m";
         String reset="\u001B[0m";
@@ -34,7 +35,7 @@ public class IO_ES {
         do 
         {
             
-            System.out.print("Introduce un número entero, por favor: ");
+            System.out.print(mensaje);
             String num = teclado.nextLine();
         
             try
@@ -61,10 +62,11 @@ public class IO_ES {
     /**
      * Pide al usuario que introduzca un número real por teclado.
      * 
+     * @param String mensaje. Introduce un texto para que salga por pantalla.
      * @return Float. Número real introducido por el usuario.
      */
     
-    static public float leerReal(){
+    static public float leerReal(String mensaje){
         
         float numero = 0 ;
         boolean validador = false ;
@@ -76,7 +78,7 @@ public class IO_ES {
         do 
         {
             
-            System.out.print("Introduce un número real, por favor: ");
+            System.out.print(mensaje);
             String num = teclado.nextLine();
             
             try
@@ -103,10 +105,11 @@ public class IO_ES {
     /**
      * Pide al usuario que introduzca un número entero largo por teclado.
      * 
+     * @param String mensaje. Introduce un texto para que salga por pantalla.
      * @return Long. Número entero largo introducido por el usuario.
      */
     
-    static public long leerIntegerLargo(){
+    static public long leerIntegerLargo(String mensaje){
         
         long numero = 0 ;
         boolean validador = false ;
@@ -118,7 +121,7 @@ public class IO_ES {
         do 
         {
             
-            System.out.print("Introduce un número entero largo, por favor: ");
+            System.out.print(mensaje);
             String num = teclado.nextLine();
             
             try
@@ -145,10 +148,11 @@ public class IO_ES {
     /**
      * Pide al usuario que introduzca un número real largo por teclado.
      * 
+     * @param String mensaje. Introduce un texto para que salga por pantalla.
      * @return Double. Número real largo introducido por el usuario.
      */
     
-    static public double leerRealLargo(){
+    static public double leerRealLargo(String mensaje){
         
         double numero = 0 ;
         boolean validador = false ;
@@ -160,7 +164,7 @@ public class IO_ES {
         do 
         {
             
-            System.out.print("Introduce un número real largo, por favor: ");
+            System.out.print(mensaje);;
             String num = teclado.nextLine();
             
             try
@@ -187,17 +191,18 @@ public class IO_ES {
     /**
      * Pide al usuario un mensaje tipo String por teclado.
      * 
+     * @param String mensaje. Introduce un texto para que salga por pantalla.
      * @return Devuelve el mensaje introducido por teclado como String.
      */
     
-    public static String leerString(){
+    public static String leerString(String mensaje){
         
         Scanner teclado = new Scanner(System.in);
             
-        System.out.print("Escribe aquí: ");
-        String mensaje = teclado.nextLine();
+        System.out.print(mensaje);
+        String mensajeUsuario = teclado.nextLine();
         
-        return mensaje ;
+        return mensajeUsuario ;
         
     }
     

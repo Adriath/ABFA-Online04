@@ -87,9 +87,7 @@ public class ValidarCadenas {
             IO_ES.escribirLN("2. Validar matrícula ciclomotor.");
             IO_ES.escribirLN("\n-- Pulsa 0 para volver al menú principal.");
             
-            IO_ES.escribir("\nSelecciona una opción a continuación. ");
-            
-            opcion = IO_ES.leerInteger(); // Recoge el número entero del usuario.
+            opcion = IO_ES.leerInteger("\nSelecciona una opción a continuación. "); // Recoge el número entero del usuario.
             
                        
                 switch (opcion)
@@ -97,8 +95,7 @@ public class ValidarCadenas {
 
                     case 1: // Valida las matrículas de coche.
                         
-                        IO_ES.escribir("\n¿Qué matrícula quieres comprobar? ");
-                        String matricula = IO_ES.leerString();
+                        String matricula = IO_ES.leerString("\n¿Qué matrícula quieres comprobar? ");
 
                         boolean resultado = comprobarMatriculaAutomovil(matricula);
                         
@@ -115,18 +112,17 @@ public class ValidarCadenas {
 
                     case 2: // Valida las matrículas de ciclomotor.
 
-                        IO_ES.escribir("\n¿Qué matrícula quieres comprobar? ");
-                        matricula = IO_ES.leerString();
+                        matricula = IO_ES.leerString("\n¿Qué matrícula quieres comprobar?");
                         
                         resultado = comprobarMatriculaCiclomotor(matricula);
                         
                          if (resultado == true) {
                             
-                            IO_ES.escribirLN("La matrícula es válida.");
+                            IO_ES.escribirLN("La matrícula " + matricula + " es válida.");
                         }
                         else{
                             
-                            IO_ES.escribirLN("La matrícula no es válida.");
+                            IO_ES.escribirLN("La matrícula " + matricula + " no es válida.");
                         }
                         
                         break;
@@ -151,6 +147,8 @@ public class ValidarCadenas {
         IO_ES.escribirLN("Saliendo del submenú.");
         IO_ES.escribirLN("--------------------------------------------");
     }
-    
+    public static void main(String[] args) {
+        opcionesMenu();
+    }
     
 }
