@@ -51,6 +51,7 @@ public class CadenaCaracteres {
         
         // DECLARACIÓN DE VARIABLES
         
+        boolean validador = false ;
         int opcion = 0;
         
         CadenaCaracteres objeto = new CadenaCaracteres();
@@ -59,6 +60,7 @@ public class CadenaCaracteres {
         
         String rojo="\033[31m";
         String reset="\u001B[0m"; //resetea el color
+        
         
         Scanner teclado = new Scanner (System.in);
         
@@ -72,6 +74,7 @@ public class CadenaCaracteres {
             System.out.println("1. Buscar palabra $Hyperboss.");
             System.out.println("2. Sustituir $Hyperboss por COÑAZO.");
             System.out.println("3. Visualiza la primera fase de $Hyperboss.");
+            System.out.println("\n-- Pulsa 0 para salir del menú.");
             
             System.out.println("\nSelecciona una de las opciones: ");
             String opc = teclado.nextLine() ;
@@ -81,19 +84,61 @@ public class CadenaCaracteres {
             }
             catch (NumberFormatException e){
                 
-                System.out.println(rojo +  "Introduce un número válido, por favor.\n" + reset);
+                System.out.println(rojo +  "Puede que hayas introducido una letra o un decimal..\n" + reset);
             }
             catch (Exception e){
                 
                 System.out.println(rojo + "Puede que hayas introducido algo mal. \n" + reset);
             }
             
+            try
+            {
+                
             
+                switch (opcion)
+                {
+
+                    case 1: // Busca en el texto la palabra Hyperboss.
+
+                        System.out.println(objeto.buscaHyperboss());
+                        break;
+
+                    case 2: // Sustituye la palabra Hyperboss por COÑAZO
+
+                        System.out.println(objeto.sustituyeHyperboss());
+                        break;
+
+                    case 3: // Muestra la primera frase en la que aparece la palabra Hyperboss.
+
+                        System.out.println(objeto.muestraPrimeraFrase());
+                        break;
+
+                    default:
+
+                        if (opcion == 0)
+                        {
+                            validador = true;
+                        }
+                        else
+                        {
+                            System.out.println("Elige una opción válida, por favor.");
+                        }
+                        break;
+                }
+            }
+            catch(NumberFormatException e){
+                
+                System.out.println(rojo + "Puede que hayas introducido una letra." + reset);
+            }
+            catch (Exception e){
+                System.out.println(rojo + "Has introducido algún carácter inválido" + reset);
+            }
             
-        } while (opcion!=0);
+        } while (validador == false);
         
         System.out.println("--------------------------------------------");
-        System.out.println("Has salido del menú. \n");
+        System.out.println("Saliendo del submenú. \n");
+        System.out.println("--------------------------------------------");
     }
     
     public String buscaHyperboss(){
@@ -149,13 +194,20 @@ public class CadenaCaracteres {
         
         String cadena1 = objeto.textoAdjunto();
         String cadena2 = "$Hyperboss";
+        String cadena3 = "despacho." ;
         int posicion = cadena1.indexOf(cadena2);
         
-        cadena1 = cadena1.substring((posicion - 24),(posicion + cadena2.length()));
+        cadena1 = cadena1.substring(posicion,((cadena1.indexOf(cadena3)) + cadena3.length()));
         
         return cadena1;
     }
    
+    public static void main(String[] args) {
+        
+        CadenaCaracteres objeto = new CadenaCaracteres();
+        
+        objeto.opcionesMenu();
+}
     
 }
 
