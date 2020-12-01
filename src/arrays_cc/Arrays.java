@@ -69,8 +69,10 @@ public class Arrays {
         int numeroUsuario ;
         double media ;
         double suma = 0;
-        double numeroMasAlto ;
-        double numeroMasBajo ;
+        double valor1 ;
+        double valor2 ;
+        double numeroMasAlto = 0;
+        double numeroMasBajo = 0 ;
         
         double array [] ; // El array de tipo double (decimal)
         
@@ -91,9 +93,35 @@ public class Arrays {
         
         media = suma / array.length ; // Realiza la media 
         
+        for (int i = 0; i < (array.length - 1); i++) 
+        {
+            valor1 = array[i] ;
+            valor2 = array[i+1] ;
+            
+            if (valor1 > valor2 )
+            {
+                if (valor1 > numeroMasAlto) 
+                {
+                    numeroMasAlto = valor1 ;
+                }
+                 
+            }
+            else if (valor1 < valor2)
+            {
+                if (valor2 > numeroMasAlto) 
+                {
+                    numeroMasAlto = valor2 ;
+                }
+                 
+            }
+            
+                            
+        }
+        
         // ------- SALIDA DE DATOS -----------
         
         IO_ES.escribirLN("\nLa media de los números contenidos en el array : " + media);
+        IO_ES.escribirLN("\nEl número más alto es " + numeroMasAlto);
 
         
     }
