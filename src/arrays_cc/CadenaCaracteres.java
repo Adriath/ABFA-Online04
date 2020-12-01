@@ -23,11 +23,16 @@ public class CadenaCaracteres {
     
     // MÉTODOS
     
-    public static String textoAdjunto(){ // He decidido meterlo en un método porque
+    public String textoAdjunto(){ // He decidido meterlo en un método porque
                                             // no hallaba la manera de que funcionara como variable normal.
                                             // Además queda limpio.
         
         String texto = "";
+        
+        // Colores para la consola
+        
+        String rojo="\033[31m";
+        String reset="\u001B[0m"; //resetea el color
         
         try
         {
@@ -35,14 +40,14 @@ public class CadenaCaracteres {
         }
         catch (IOException e)
         {
-            System.out.println("ERROR " + e.getMessage());
+            System.out.println(rojo + "ERROR " + e.getMessage() + reset);
         }
         
         return texto;
         
     }
     
-    public static void opcionesMenu(){
+    public void opcionesMenu(){
         
         // DECLARACIÓN DE VARIABLES
         
@@ -88,15 +93,66 @@ public class CadenaCaracteres {
         System.out.println("Has salido del menú. \n");
     }
     
+    public String buscaHyperboss(){
+        
+        CadenaCaracteres objeto = new CadenaCaracteres();
+        
+        String cadena1 = objeto.textoAdjunto(); // Texto adjunto. Devuelve un String.
+        String cadena2 = "$Hyperboss" ; // La palabra que queremos comprobar.
+        int contador = 0;
+        
+        int posicion = cadena1.indexOf(cadena2);
+        
+        
+        while (posicion > -1){ // Cuando no encuentre la palabra retornará -1 y saldrá del bucle.
+            
+            posicion = cadena1.indexOf(cadena2,(posicion + 1));
+            contador++ ;
+        }
+        
+        
+        return ("La palabra " + cadena2 + " aparece " + contador + " veces en el texto.") ;
+    
+    }
+    
+    public String sustituyeHyperboss(){
+        
+        //DECLACIÓN DE VARIABLES
+        
+        CadenaCaracteres objeto = new CadenaCaracteres();
+        
+        String cadena1 = objeto.textoAdjunto();
+        String cadena2 = "$Hyperboss";
+        String cadena3 = "COÑAZO";
+
+        // Colores para la consola
+        
+        String blue="\033[34m";
+        String reset="\u001B[0m";
+        
+        // PROCESAMIENTO
+        
+       cadena1 = cadena1.replace(cadena2, blue + cadena3 + reset);
+        
+        //SALIDA DE DATOS
+        
+        return cadena1;
+        
+    }
     
     
     public static void main(String[] args) { //MAIN PROVISIONAL
         
-        opcionesMenu();
-//        System.out.println(textoAdjunto());
+        CadenaCaracteres objeto = new CadenaCaracteres();
         
+//        objeto.opcionesMenu();
+//        System.out.println(objeto.textoAdjunto());
+//        System.out.println(objeto.buscaHyperboss());
+//        System.out.println(objeto.sustituyeHyperboss());
+            
     }
    
     
-    
 }
+
+
