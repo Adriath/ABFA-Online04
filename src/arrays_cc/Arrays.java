@@ -6,6 +6,8 @@
 package arrays_cc;
 
 import utilidades.IO_ES;
+import static utilidades.ValidarCadenas.comprobarMatriculaAutomovil;
+import static utilidades.ValidarCadenas.comprobarMatriculaCiclomotor;
 
 /**
  * Realiza operaciones con arrays eligiendo entre los distintos métodos a través del submenú.
@@ -45,7 +47,7 @@ public class Arrays {
      * array y la posición que ocupa.
      */
     
-    public void arrayPosicionesAleatorias(){
+    public void arrayAdivinaNumeroHasta20(){
         
         boolean validador = false ;
         int [] array = new int [10] ;
@@ -91,7 +93,7 @@ public class Arrays {
      * el más bajo y lo mostrará por pantalla.
      */
     
-    public void compruebaTamanoArrayDecimal(){
+    public void arrayObtieneMediaNumeroAltoBajo(){
         
         // ------ DECLARACIONES ----------
         
@@ -191,6 +193,11 @@ public class Arrays {
         
     }
     
+    /**
+     * Muestra la cantidad de números mayores y menores que 50 a patir de un array
+     * de longitud definida por el usuario y de valores aleatorios.
+     */
+    
     public void ArrayNumerosMayoresMenores50(){
         
         // ------------ DECLARACIONES --------------
@@ -241,12 +248,86 @@ public class Arrays {
         
     }
     
+    
+    /**
+     * Submenú para elegir entre los distintos métodos de la clase Arrays. Se le llama
+     * submenú porque está pensado para integrarse en otro menú.
+     */
+    
+    public static void opcionesMenu(){
+        
+        // DECLARACIÓN DE VARIABLES
+        
+        boolean validador = false ;
+        int opcion;
+        
+        Arrays objeto = new Arrays() ; 
+        
+        // PROCESAMIENTO
+        
+        do {
+            
+            IO_ES.escribirLN("\nBienvenido/a al submenú de ejercicios de arrays.");
+            IO_ES.escribirLN("---------------------------------------------");
+            IO_ES.escribirLN("1. Array 10 primeros números pares.");
+            IO_ES.escribirLN("2. Adivinar número del array comprendido entre 1 y 20.");
+            IO_ES.escribirLN("3. Obtener del array la media, el número más alto y el más bajo.");
+            IO_ES.escribirLN("4. Obtener cantidad de números mayores y menores que 50 contenidos en el array.");
+            IO_ES.escribirLN("\n-- Pulsa 0 para volver al menú principal.");
+            
+            opcion = IO_ES.leerInteger("\nSelecciona una opción a continuación. "); // Recoge el número entero del usuario.
+            
+                       
+                switch (opcion)
+                {
+
+                    case 1: // Array 10 primeros números pares
+                        
+                        objeto.muestraArrayDiezPrimerosNumerosPares();
+                        
+                        break;
+
+                    case 2: // Adivinar número del array comprendido entre 1 y 20.
+
+                       objeto.arrayAdivinaNumeroHasta20();
+                        
+                        break;
+                        
+                    case 3: // Obtener del array la media, el número más alto y el más bajo.
+
+                   objeto.arrayObtieneMediaNumeroAltoBajo();
+
+                    break;
+                    
+
+                    case 4: // Obtener cantidad de números mayores y menores que 50 contenidos en el array.
+
+                   objeto.ArrayNumerosMayoresMenores50();
+
+                    break;
+
+                    default:
+
+                        if (opcion == 0)
+                        {
+                            validador = true;
+                        }
+                        else
+                        {
+                            IO_ES.escribirLN("\nElige una opción válida, por favor.");
+                        }
+                        break;
+                }
+            
+            
+        } while (validador == false);
+        
+        IO_ES.escribirLN("--------------------------------------------");
+        IO_ES.escribirLN("Saliendo del submenú.");
+        IO_ES.escribirLN("--------------------------------------------");
+    }
     public static void main(String[] args) {
-        Arrays objeto = new Arrays();
-//        objeto.arrayPosicionesAleatorias();
-//        objeto.muestraArrayDiezPrimerosNumerosPares();
-//        objeto.compruebaTamanoArrayDecimal();
-        objeto.ArrayNumerosMayoresMenores50();
+        opcionesMenu();
     }
 }
     

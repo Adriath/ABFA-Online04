@@ -147,8 +147,6 @@ public class ValidarCadenas {
         IO_ES.escribirLN("Saliendo del submenú.");
         IO_ES.escribirLN("--------------------------------------------");
     }
-    public static void main(String[] args) {
-        opcionesMenu();
-    }
+    
     
 }
