@@ -259,13 +259,16 @@ public class Arrays {
         boolean validador = false ;
         int opcion;
         
+        String azul="\033[34m";
+        String reset="\u001B[0m";
+        
         Arrays objeto = new Arrays() ; 
         
         // PROCESAMIENTO
         
         do {
             
-            IO_ES.escribirLN("\nBienvenido/a al submenú de ejercicios de arrays.");
+            IO_ES.escribirLN(azul + "\nBienvenido/a al submenú de ejercicios de arrays." + reset);
             IO_ES.escribirLN("---------------------------------------------");
             IO_ES.escribirLN("1. Array 10 primeros números pares.");
             IO_ES.escribirLN("2. Adivinar número del array comprendido entre 1 y 20.");
@@ -312,7 +315,7 @@ public class Arrays {
                         }
                         else
                         {
-                            IO_ES.escribirLN("\nElige una opción válida, por favor.");
+                            IO_ES.escribirLN("\nElige una opción válida, por favor.\n");
                         }
                         break;
                 }

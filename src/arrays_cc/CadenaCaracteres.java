@@ -70,11 +70,13 @@ public class CadenaCaracteres {
         boolean validador = false ;
         int opcion = 0;
         
+        
         CadenaCaracteres objeto = new CadenaCaracteres();
         
         // Colores para la consola
         
         String rojo="\033[31m";
+        String azul="\033[34m";
         String reset="\u001B[0m"; //resetea el color
         
         
@@ -84,8 +86,8 @@ public class CadenaCaracteres {
         
         do {
             
-            System.out.println("\nBienvenido/a al submenú de ejercicios con cadenas de"
-                    + " caracteres.");
+            System.out.println(azul + "\nBienvenido/a al submenú de ejercicios con cadenas de"
+                    + " caracteres." + reset);
             System.out.println("---------------------------------------------");
             System.out.println("1. Buscar palabra $Hyperboss.");
             System.out.println("2. Sustituir $Hyperboss por COÑAZO.");
@@ -139,18 +141,18 @@ public class CadenaCaracteres {
                         }
                         else
                         {
-                            System.out.println("\nElige una opción válida, por favor.");
+                            System.out.println("\nElige una opción válida, por favor.\n");
                         }
                         break;
                 }
             }
             catch(NumberFormatException e){
                 
-                System.out.println(rojo + "Puede que hayas introducido una letra." + reset);
+                System.out.println(rojo + "\nPuede que hayas introducido una letra." + reset);
                 opcion = -1;
             }
             catch (Exception e){
-                System.out.println(rojo + "Has introducido algún carácter inválido" + reset);
+                System.out.println(rojo + "\nHas introducido algún carácter inválido" + reset);
                 opcion = -1;
             }
             
@@ -196,7 +198,7 @@ public class CadenaCaracteres {
         }
         
         
-        return ("\nLa palabra " + cadena2 + " aparece " + contador + " veces en el texto.") ;
+        return ("\nLa palabra " + cadena2 + " aparece " + contador + " veces en el texto. (Si quieres leer el texto ve a la opción 2).") ;
     
     }
     

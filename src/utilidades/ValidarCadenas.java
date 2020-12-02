@@ -77,11 +77,14 @@ public class ValidarCadenas {
         boolean validador = false ;
         int opcion;
         
+        String azul="\033[34m";
+        String reset="\u001B[0m";
+        
         // PROCESAMIENTO
         
         do {
             
-            IO_ES.escribirLN("\nBienvenido/a al submenú de expresiones regulares.");
+            IO_ES.escribirLN(azul + "\nBienvenido/a al submenú de expresiones regulares." + reset);
             IO_ES.escribirLN("---------------------------------------------");
             IO_ES.escribirLN("1. Validar matrícula coche.");
             IO_ES.escribirLN("2. Validar matrícula ciclomotor.");
@@ -101,11 +104,11 @@ public class ValidarCadenas {
                         
                         if (resultado == true) {
                             
-                            IO_ES.escribirLN("La matrícula es válida.");
+                            IO_ES.escribirLN("La matrícula es VÁLIDA.");
                         }
                         else{
                             
-                            IO_ES.escribirLN("La matrícula no es válida.");
+                            IO_ES.escribirLN("La matrícula NO ES VÁLIDA.");
                         }
                         
                         break;
@@ -118,11 +121,11 @@ public class ValidarCadenas {
                         
                          if (resultado == true) {
                             
-                            IO_ES.escribirLN("La matrícula " + matricula + " es válida.");
+                            IO_ES.escribirLN("La matrícula " + matricula + " es VÁLIDA.");
                         }
                         else{
                             
-                            IO_ES.escribirLN("La matrícula " + matricula + " no es válida.");
+                            IO_ES.escribirLN("La matrícula " + matricula + " NO ES VÁLIDA.");
                         }
                         
                         break;
@@ -135,7 +138,7 @@ public class ValidarCadenas {
                         }
                         else
                         {
-                            IO_ES.escribirLN("\nElige una opción válida, por favor.");
+                            IO_ES.escribirLN("\nElige una opción válida, por favor.\n");
                         }
                         break;
                 }
