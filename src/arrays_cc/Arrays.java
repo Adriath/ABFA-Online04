@@ -16,7 +16,7 @@ import utilidades.IO_ES;
 public class Arrays {
     
     /**
-     * Muestras los primeros 10 números pares contenidos en un array de 10 posiciones.
+     * Muestra los primeros 10 números pares contenidos en un array de 10 posiciones.
      */
     
     public void muestraArrayDiezPrimerosNumerosPares(){

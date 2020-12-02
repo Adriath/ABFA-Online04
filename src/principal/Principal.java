@@ -14,7 +14,8 @@ import static utilidades.ValidarCadenas.comprobarMatriculaAutomovil;
 import static utilidades.ValidarCadenas.comprobarMatriculaCiclomotor;
 
 /**
- *
+ * Menú principal de la tarea online 4.
+ * 
  * @author Adrián Arjona
  * @version 1.0
  */

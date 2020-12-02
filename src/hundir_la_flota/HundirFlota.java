@@ -5,8 +5,6 @@
  */
 package hundir_la_flota;
 
-import utilidades.IO_ES;
-
 /**
  * Juego de Hundir la Flota.
  * 
@@ -20,6 +18,12 @@ public class HundirFlota {
     char letras = 'A' ;
 
     String[][] tablero = new String[COLUMNA][FILA] ;
+    
+    /**
+     * Crea el tablero para jugar a Hundir la Flota.
+     * 
+     * @param visualizar booleano. Introduce true para visualizar el tablero y false para ocultarlo.
+     */
     
     public static void tablero(boolean visualizar){ //true para visualizar, false para ocultar
         
