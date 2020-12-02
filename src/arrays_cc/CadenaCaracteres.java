@@ -251,15 +251,6 @@ public class CadenaCaracteres {
         return cadena1;
     }
     
-    
-   
-    public static void main(String[] args) {
-        
-        CadenaCaracteres objeto = new CadenaCaracteres();
-        
-        objeto.opcionesMenu();
-}
-    
 }
 
 

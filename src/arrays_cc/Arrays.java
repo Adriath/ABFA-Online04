@@ -6,8 +6,6 @@
 package arrays_cc;
 
 import utilidades.IO_ES;
-import static utilidades.ValidarCadenas.comprobarMatriculaAutomovil;
-import static utilidades.ValidarCadenas.comprobarMatriculaCiclomotor;
 
 /**
  * Realiza operaciones con arrays eligiendo entre los distintos métodos a través del submenú.
@@ -326,9 +324,7 @@ public class Arrays {
         IO_ES.escribirLN("Saliendo del submenú.");
         IO_ES.escribirLN("--------------------------------------------");
     }
-    public static void main(String[] args) {
-        opcionesMenu();
-    }
+    
 }
     
     
