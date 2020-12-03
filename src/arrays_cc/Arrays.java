@@ -50,7 +50,8 @@ public class Arrays {
         boolean validador = false ;
         int [] array = new int [10] ;
         
-        IO_ES.escribirLN("\nVamos a intentar adivinar un número comprendido entre el 1 y el 20.");
+        IO_ES.escribirLN("\nVamos a intentar adivinar un número comprendido entre el 1 y el 20 que se encuentra dentro de un array. "
+                + "También sabremos en qué posición(es) se encuentra dentro del array.");
         
         for (int i = 0; i < 10; i++) { // Relleno el array con números aleatorios entre 1 y 20.
             

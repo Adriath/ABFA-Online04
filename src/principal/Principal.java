@@ -10,8 +10,6 @@ import arrays_cc.CadenaCaracteres;
 import hundir_la_flota.HundirFlota;
 import utilidades.IO_ES;
 import utilidades.ValidarCadenas;
-import static utilidades.ValidarCadenas.comprobarMatriculaAutomovil;
-import static utilidades.ValidarCadenas.comprobarMatriculaCiclomotor;
 
 /**
  * Menú principal de la tarea online 4.

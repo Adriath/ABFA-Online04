@@ -9,6 +9,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import utilidades.IO_ES;
 
 
 /* NOTA: No he incorporado aquí los métodos de la clase IO_ES porque, según el 
@@ -125,11 +126,17 @@ public class CadenaCaracteres {
 
                     case 2: // Sustituye la palabra Hyperboss por COÑAZO
 
+                        IO_ES.escribirLN("\nA continuación se va a mostrar el contenido de texto.txt con la palabra"
+                                + " $Hyperboss cambiada por COÑAZO. Puede verse en azul.\n") ;
+                        
                         System.out.println(objeto.sustituyeHyperboss());
                         break;
 
                     case 3: // Muestra la primera frase en la que aparece la palabra Hyperboss.
 
+                        IO_ES.escribirLN("\n Se va a mostrar la primera frase en la que va contenida la palabra "
+                                + "$Hyperboss dentro del contenido de texto.txt\n") ;
+                        
                         System.out.println(objeto.muestraPrimeraFrase());
                         break;
 
@@ -180,6 +187,7 @@ public class CadenaCaracteres {
         
         int posicion = cadena1.indexOf(cadena2);
         
+        IO_ES.escribirLN("\nVamos a buscar la palabra $Hyperboss en el documento texto.txt para comprobar cuántas veces se repite.");
         
         while (posicion > -1){ // Cuando no encuentre la palabra retornará -1 y saldrá del bucle.
             
@@ -198,7 +206,7 @@ public class CadenaCaracteres {
         }
         
         
-        return ("\nLa palabra " + cadena2 + " aparece " + contador + " veces en el texto. (Si quieres leer el texto ve a la opción 2).") ;
+        return ("\n // La palabra " + cadena2 + " aparece " + contador + " veces en el texto. (Si quieres leer el texto ve a la opción 2).") ;
     
     }
     
