@@ -13,6 +13,14 @@ package hundir_la_flota;
  */
 public class HundirFlota {
     
+    /*
+        He intentado hacerlo por todos los medios. Sé que con los conocimientos que tengo
+        puedo acabar el ejercicio pero estoy perdido y no encuentro el camino tras mirar el foros, 
+        webs, tutoriales, videotutoriales. No tengo más tiempo para seguir indagando y probando. 
+        Muestro el resultado que tengo hasta ahora, el tablero y un esquema prematuro
+        de lo que podría haber sido.
+    */
+    
     final int FILA = 11 ;
     final int COLUMNA = 11 ;
     char letras = 'A' ;

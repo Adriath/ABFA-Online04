@@ -98,7 +98,7 @@ public class ValidarCadenas {
 
                     case 1: // Valida las matrículas de coche.
                         
-                        String matricula = IO_ES.leerString("\n¿Qué matrícula quieres comprobar? ");
+                        String matricula = IO_ES.leerString("\n¿Qué matrícula quieres comprobar? (formato: 0000BBB)");
 
                         boolean resultado = comprobarMatriculaAutomovil(matricula);
                         
@@ -115,7 +115,7 @@ public class ValidarCadenas {
 
                     case 2: // Valida las matrículas de ciclomotor.
 
-                        matricula = IO_ES.leerString("\n¿Qué matrícula quieres comprobar?");
+                        matricula = IO_ES.leerString("\n¿Qué matrícula quieres comprobar? (formato: B0000BBB)");
                         
                         resultado = comprobarMatriculaCiclomotor(matricula);
                         

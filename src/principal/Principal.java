@@ -45,7 +45,7 @@ public class Principal {
         
         do {
             
-            IO_ES.escribirLN("-------------- " + azul + "Menú Principal"  + reset + "---------------");
+            IO_ES.escribirLN("-------------- " + azul + "Menú Principal"  + reset + " ---------------");
             IO_ES.escribirLN("---------------------------------------------");
             IO_ES.escribirLN("1. Cadena de caracteres.");
             IO_ES.escribirLN("2. Expresiones regulares.");
